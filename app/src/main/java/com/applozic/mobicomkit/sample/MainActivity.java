@@ -31,6 +31,7 @@ import com.applozic.mobicomkit.api.conversation.MessageIntentService;
 import com.applozic.mobicomkit.api.conversation.MobiComConversationService;
 import com.applozic.mobicomkit.contact.AppContactService;
 import com.applozic.mobicomkit.feed.TopicDetail;
+import com.applozic.mobicomkit.sample.pushnotification.ChatBotActivity;
 import com.applozic.mobicomkit.uiwidgets.async.ApplozicConversationCreateTask;
 import com.applozic.mobicomkit.uiwidgets.conversation.ConversationUIService;
 import com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity;
@@ -130,7 +131,7 @@ public class MainActivity extends ActionBarActivity
         // update the main content by replacing fragments
 
         if (position == 1) {
-            Intent intent = new Intent(this, ConversationActivity.class);
+            Intent intent = new Intent(this, ChatBotActivity.class);
             if(ApplozicClient.getInstance(this).isContextBasedChat()){
                 intent.putExtra(ConversationUIService.CONTEXT_BASED_CHAT,true);
             }
